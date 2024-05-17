@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Регистрация и вход</title>
+    <link rel="stylesheet" href="form.css" />
+  </head>
+  <body>
+    <section class="wrapper">
+      <div class="form signup">
+        <header>Регистрация</header>
+        <form action="index.html">
+          <input type="text" placeholder="Полное имя" required />
+          <input type="text" placeholder="Адрес электронной почты" required />
+          <input type="password" placeholder="Пароль" required />
+          <div class="checkbox">
+            <input type="checkbox" id="signupCheck" />
+            <label for="signupCheck">Я принимаю все условия и положения</label>
+          </div>
+          <input type="submit" value="Регистрация" />
+        </form>
+      </div>
+
+      <div class="form login">
+        <header>Вход</header>
+        <form action="index.html">
+          <input type="text" placeholder="Адрес электронной почты" required />
+          <input type="password" placeholder="Пароль" required />
+          <a href="#">Забыли пароль?</a>
+          <input type="submit" value="Вход" />
+        </form>
+      </div>
+    </section>
+    <script src="form.js"></script>
+  </body>
+</html>

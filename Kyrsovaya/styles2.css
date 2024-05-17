@@ -1,0 +1,217 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #021008e0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #000000;
+    color: #ce2e2e;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    background-color: #000000;
+    text-align: center;
+    padding: 15px 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 9px;
+}
+
+nav a, .dropbtn {
+    color: #c51414;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 8px 12px;
+    border: 2px solid #000000;
+    border-radius: 20px;
+    background-color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 16px; /* добавляем размер шрифта */
+}
+
+nav a:hover, .dropdown:hover .dropbtn {
+    background-color: #4d0000;
+    color: #fff;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 9px;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #660000;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+section {
+    padding: 5px;
+}
+
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: left;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.social-icons {
+    margin-right: auto;
+}
+
+.social-icons a {
+    margin-right: 1px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 3px;
+    border-radius: 60%;
+    color: #333;
+}
+  h1{
+text-align: center;
+font-weight: 900;
+}
+/* Стили для модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* Эффект размытия для заднего фона */
+.blur-background {
+    filter: blur(5px);
+}
+
+
+/* Добавляем стили для серий */
+#episodes ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку */
+    justify-content: space-between; /* Равномерное распределение между элементами */
+}
+
+#episodes li {
+    width: 48%; /* Ширина элемента, чтобы было два элемента в строке */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+#episodes img {
+    max-width: 100%;
+    height: auto;
+}
+#close-button {
+    position: absolute;
+    top: 100px; /* отступ сверху */
+    right: 10px; /* отступ справа */
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+@media screen and (max-width: 600px) {
+    /* Для экранов меньше 600px меняем ширину элементов, чтобы было по одной серии в строке */
+    #episodes li {
+        width: 100%;
+    }
+}
+/* Для размера 360x740 */
+@media (max-width: 360px) {
+    nav {
+        padding: 0; /* Убираем внешний отступ у навигационного меню */
+        position: static; /* Убираем позиционирование для навигационного меню */
+        display: flex; /* Используем flexbox для расположения кнопок */
+        flex-wrap: wrap; /* Позволяем кнопкам переноситься на следующую строку */
+        justify-content: center; /* Выравниваем кнопки по центру */
+    }
+    nav a, .dropbtn {
+        margin: 0 2%; /* Отступы по горизонтали 2% */
+        padding: 2% 3%; /* Внутренние отступы 2% сверху и снизу, 3% слева и справа */
+        font-size: 3.5vw; /* Размер шрифта в виртуальных единицах ширины (vw) */
+    }
+    .main-title {
+        font-size: 4.5vw; /* Размер шрифта заголовка в виртуальных единицах ширины (vw) */
+        padding: 2% 3%; /* Внутренние отступы 2% сверху и снизу, 3% слева и справа */
+        margin: 3% auto; /* Отступы по вертикали 3%, по горизонтали авто */
+        width: 90%; /* Ширина заголовка 90% */
+    }
+    .dropdown-content {
+        min-width: 20%; /* Минимальная ширина выпадающего меню 20% */
+    }
+    .social-icons a {
+        width: 5%; /* Ширина иконок социальных сетей 5% */
+        height: 5%; /* Высота иконок социальных сетей 5% */
+        line-height: 2px;
+    }
+}

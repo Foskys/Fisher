@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Просмотр серии "Фишер"</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src='eye256x256_114396.png' alt="Логотип">
+        </div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="news.html">Новости</a>
+            <a href="ivan.html">Актеры</a>
+            <a href="watch.html">Смотреть</a>
+            <a href="form.html">Регистрация</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="episodes">
+            <h1>Список серий:</h1>
+            <ul>
+                <li>
+                    <a href="fifa.mp4" onclick="showVideo('watch.mp4')">
+                        <img src="ser.webp" alt="Серия 1">
+                        <p>Серия первая</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="fifa.mp4" onclick="showVideo('video1.mp4')">
+                        <img src="ser.webp" alt="Серия 2">
+                        <p>Серия вторая</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="fifa.mp4" onclick="showVideo('video1.mp4')">
+                        <img src="ser.webp" alt="Серия 3">
+                        <p>Серия третья</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="fifa.mp4" onclick="showVideo('video1.mp4')">
+                        <img src="ser.webp" alt="Серия 4">
+                        <p>Серия четвертая</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="fifa.mp4" onclick="showVideo('video1.mp4')">
+                        <img src="ser.webp" alt="Серия 5">
+                        <p>Серия пятая</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="fifa.mp4" onclick="showVideo('video1.mp4')">
+                        <img src="ser.webp" alt="Серия 6">
+                        <p>Серия шестая</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="fifa.mp4" onclick="showVideo('video1.mp4')">
+                        <img src="ser.webp" alt="Серия 7">
+                        <p>Серия седьмая</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="fifa.mp4" onclick="showVideo('video1.mp4')">
+                        <img src="ser.webp" alt="Серия 8">
+                        <p>Серия восьмая</p>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="#"><img src="link-to-icon1.png" alt="Icon 1"></a>
+            <a href="#"><img src="link-to-icon2.png" alt="Icon 2"></a>
+            <!-- Добавьте другие иконки, при необходимости -->
+        </div>
+    </footer>
+    <!-- Модальное окно с видео -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <video id="videoPlayer" controls autoplay loop></video>
+        </div>
+    </div>
+    
+
+    <script src="watch.js"></script> <!-- Подключение вашего файла со скриптами -->
+</body>
+</html>

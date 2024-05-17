@@ -1,0 +1,512 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #021008e0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #000000;
+    color: #ce2e2e;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    background-color: #000000;
+    text-align: center;
+    padding: 15px 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 9px;
+}
+
+nav a, .dropbtn {
+    color: #c81414;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 8px 12px;
+    border: 2px solid #000000;
+    border-radius: 20px;
+    background-color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 18px; /* добавляем размер шрифта */
+}
+
+nav a:hover, .dropdown:hover .dropbtn {
+    background-color: #4d0000;
+    color: #fff;
+}
+.main-title {
+    text-align: center;
+    color: #a4a4a4;
+    font-weight: bold;
+    font-family: 'Brush Script MT'; 
+    font-size: 35px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    background-color: rgba(61, 19, 19, 0.8); /* Прозрачный цвет фона */
+    border: 2px solid rgba(61, 19, 19, 0.351); /* Цвет рамки */
+    border-radius: 10px;
+    box-shadow: 0 0 55px 5px #300505;
+    text-indent: 30px;
+    padding: 10px 20px 10px 20px;
+    margin: 20px auto;
+    width: 700px;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 9px;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #660000;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+section {
+    padding: 5px;
+}
+
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: left;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.social-icons {
+    margin-right: auto;
+}
+
+.social-icons a {
+    margin-right: 1px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 3px;
+    border-radius: 60%;
+    color: #333;
+}
+.quarter-screen-video {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    overflow: hidden;
+}
+.quarter-screen-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40vh;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content {
+    text-align: center;
+}
+/* Стили для кнопки */
+.watch-button {
+    background-color: #c51414;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.watch-button:hover {
+    background-color: #4d0000;
+}
+/* Стили для отдельных новостей */
+.news-item {
+    margin-bottom: 15px; /* Отступ между новостями */
+}
+
+.container1 {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.image-container1 {
+    position: relative;
+    margin-right: 20px;
+}
+
+.image-container1 img {
+    max-width: 100%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    float: left;
+    margin-right: 20px; /* Добавьте отступ справа, чтобы текст не прижимался к изображению */
+}
+
+.image-container1 img:hover {
+    transform: scale(1.1);
+}
+
+.text-container1 {
+    color:#a4a4a4;
+    max-width: 50%;
+}
+.container2 {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 10px;
+    flex-direction: row-reverse;
+}
+
+.image-container2 {
+    position: relative;
+    margin-right: 20px;
+}
+
+.image-container2 img {
+    max-width: 100%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-right: 15px; /* Добавьте отступ справа, чтобы текст не прижимался к изображению */
+}
+
+.image-container2 img:hover {
+    transform: scale(1.1);
+}
+
+.text-container2 {
+    color: #a4a4a4;
+    max-width: 50%;
+    float: left;
+}
+.container3 {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.image-container3 {
+    position: relative;
+    margin-right: 20px;
+}
+
+.image-container3 img {
+    max-width: 100%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    float: left;
+    margin-right: 20px; /* Добавьте отступ справа, чтобы текст не прижимался к изображению */
+}
+
+.image-container3 img:hover {
+    transform: scale(1.1);
+}
+
+.text-container3 {
+     color: #a4a4a4;
+    max-width: 50%;
+}
+.container4 {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+    flex-direction: row-reverse;
+    clear: both;
+}
+
+.image-container4 {
+    position: relative;
+    margin-right: 20px;
+}
+
+.image-container4 img {
+    max-width: 100%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    float: left;
+    margin-right: 20px; /* Добавьте отступ справа, чтобы текст не прижимался к изображению */
+}
+
+.image-container4 img:hover {
+    transform: scale(1.1);
+}
+
+.text-container4 {
+    color: #a4a4a4;
+    max-width: 50%;
+}
+
+/* Анимация плавного появления модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    opacity: 0; /* Начальное значение непрозрачности */
+    transition: opacity 0.3s; /* Анимация изменения непрозрачности */
+}
+
+/* Стили для видимости модального окна */
+.modal.visible {
+    opacity: 1; /* Конечное значение непрозрачности */
+}
+
+.modal-content {
+    margin: 20px auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+/* Модальное окно для фото на полный экран */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    display: block;
+    margin: auto;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* Для размера 412x915 */
+@media (max-width: 412px) {
+    nav {
+        padding: 5px 0;
+    }
+    nav a, .dropbtn {
+        margin: 0 5px;
+        padding: 5px 8px;
+        font-size: 14px;
+    }
+    .main-title {
+        font-size: 24px;
+        padding: 10px 15px;
+        margin: 10px auto;
+        width: 90%;
+    }
+    .dropdown-content {
+        min-width: 120px;
+    }
+    .social-icons a {
+        width: 25px;
+        height: 25px;
+        line-height: 2px;
+    }
+    .container1,
+    .container2,
+    .container3,
+    .container4 {
+        flex-direction: column;
+        align-items: center;
+    }
+    .image-container1,
+    .image-container2,
+    .image-container3,
+    .image-container4 {
+        margin-right: 0;
+    }
+    .text-container1,
+    .text-container2,
+    .text-container3,
+    .text-container4 {
+        max-width: 90%;
+    }
+}
+
+/* Для размера 712x1138 */
+@media (max-width: 712px) {
+    nav {
+        padding: 10px 0;
+    }
+    nav a, .dropbtn {
+        margin: 0 8px;
+        padding: 8px 10px;
+        font-size: 16px;
+    }
+    .main-title {
+        font-size: 28px;
+        padding: 15px 20px;
+        margin: 15px auto;
+        width: 90%;
+    }
+    .dropdown-content {
+        min-width: 140px;
+    }
+    .social-icons a {
+        width: 28px;
+        height: 28px;
+        line-height: 3px;
+    }
+}
+
+/* Для размера 375x667 */
+@media (max-width: 375px) {
+    nav {
+        padding: 8px 0;
+    }
+    nav a, .dropbtn {
+        margin: 0 7px;
+        padding: 7px 9px;
+        font-size: 15px;
+    }
+    .main-title {
+        font-size: 26px;
+        padding: 12px 18px;
+        margin: 12px auto;
+        width: 90%;
+    }
+    .dropdown-content {
+        min-width: 130px;
+    }
+    .social-icons a {
+        width: 26px;
+        height: 26px;
+        line-height: 2px;
+    }
+}
+
+/* Для размера 360x740 */
+@media (max-width: 360px) {
+    nav {
+        padding: 0; /* Убираем внешний отступ у навигационного меню */
+        position: static; /* Убираем позиционирование для навигационного меню */
+        display: flex; /* Используем flexbox для расположения кнопок */
+        flex-wrap: wrap; /* Позволяем кнопкам переноситься на следующую строку */
+        justify-content: center; /* Выравниваем кнопки по центру */
+    }
+    nav a, .dropbtn {
+        margin: 0 2%; /* Отступы по горизонтали 2% */
+        padding: 2% 3%; /* Внутренние отступы 2% сверху и снизу, 3% слева и справа */
+        font-size: 3.5vw; /* Размер шрифта в виртуальных единицах ширины (vw) */
+    }
+    .main-title {
+        font-size: 4.5vw; /* Размер шрифта заголовка в виртуальных единицах ширины (vw) */
+        padding: 2% 3%; /* Внутренние отступы 2% сверху и снизу, 3% слева и справа */
+        margin: 3% auto; /* Отступы по вертикали 3%, по горизонтали авто */
+        width: 90%; /* Ширина заголовка 90% */
+    }
+    .dropdown-content {
+        min-width: 20%; /* Минимальная ширина выпадающего меню 20% */
+    }
+    .social-icons a {
+        width: 5%; /* Ширина иконок социальных сетей 5% */
+        height: 5%; /* Высота иконок социальных сетей 5% */
+        line-height: 2px;
+    }
+}
+
+/* Для размера 430x932 */
+@media (max-width: 430px) {
+    nav {
+        padding: 5px 0;
+    }
+    nav a, .dropbtn {
+        margin: 0 5px;
+        padding: 5px 8px;
+        font-size: 14px;
+    }
+    .dropdown-content {
+        min-width: 120px;
+    }
+    .social-icons a {
+        width: 25px;
+        height: 25px;
+        line-height: 2px;
+    }
+}
